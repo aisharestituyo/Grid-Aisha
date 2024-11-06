@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.padre1 {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "grande cuadro1"
+        "mediano mediano"
+        "peque peque";
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: palevioletred;
+    height: 80px;
+}
+
+.grande {
+    grid-area: grande;
+    background-color: peachpuff;
+    height: 400px;
+}
+
+.cuadro1 {
+    grid-area: cuadro1;
+    background-color: deeppink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.cuadro2 {
+    background-color: pink;
+    height: calc(50% - 10px); /* El alto pa q se dividan los espacios del cuadro */
+}
+
+.mediano {
+    grid-area: mediano;
+    background-color: pink;
+    height: 300px;
+}
+
+.peque {
+    grid-area: peque;
+    background-color: palevioletred;
+    height: 100px;
+}
+
